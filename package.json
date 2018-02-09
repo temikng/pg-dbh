@@ -1,0 +1,14 @@
+{
+  "name": "pg-dbh",
+  "description": "PostgreSQL database pool holder",
+  "private": true,
+  "main": "index.js",
+  "author": "temikng@gmail.com",
+  "dependencies": {
+    "pg": "^7.4.1"
+  },
+  "devDependencies": {
+    "koa": "^2.4.1",
+    "koa-router": "^7.4.0"
+  }
+}
