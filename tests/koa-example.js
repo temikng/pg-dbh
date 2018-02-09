@@ -30,7 +30,7 @@ Router.post('/:uid', async (ctx) => {
 	const uid = ctx.params.uid;
 
 	/**
-	 * begin transaction to update and insert data
+	 * exec sql and return result to client
 	 */
 	ctx.body = await ctx.dbh(async (db) => {
 		/**
@@ -42,6 +42,9 @@ Router.post('/:uid', async (ctx) => {
 		}
 
 		try {
+			/**
+			 * begin transaction to update and insert data
+			 */
 			return await db.Transaction(async (db) => {
 
 				/**
