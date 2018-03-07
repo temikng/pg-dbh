@@ -2,7 +2,6 @@
   "name": "pg-dbh",
   "version": "1.0.0",
   "description": "PostgreSQL database pool holder",
-  "private": true,
   "main": "index.js",
   "author": "temikng@gmail.com",
   "dependencies": {
