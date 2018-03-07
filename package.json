@@ -4,11 +4,10 @@
   "description": "PostgreSQL database pool holder",
   "main": "index.js",
   "author": "temikng@gmail.com",
-  "dependencies": {
-    "pg": "^7.4.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "koa": "^2.4.1",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "pg": "7.4.1"
   }
 }

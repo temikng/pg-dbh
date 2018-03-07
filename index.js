@@ -1,5 +1,3 @@
-const { Pool } = require('pg');
-
 const dbRoot = require('./libs/db-root');
 const dbFunctions = require('./libs/db-functions');
 
@@ -8,12 +6,13 @@ module.exports = initPool;
 /**
  * Initialize holder postgresql pool connection
  * with useful functions
+ * @param pg
  * @param connectionConfig
  * @param params
  * @returns {function(*)}
  */
-function initPool (connectionConfig, params = {}) {
-	const pool = new Pool(connectionConfig);
+function initPool (pg, connectionConfig, params = {}) {
+	const pool = new pg.Pool(connectionConfig);
 
 	pool.on('error', params.onError || function (err) {
 		console.error('PG-DBH ERROR:', err);
