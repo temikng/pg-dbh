@@ -1,5 +1,6 @@
 const env = process.env;
 const Koa = require('koa');
+const pg = require('pg');
 const Router = new require('koa-router')();
 const pgDbhInit = require('./../index');
 
@@ -21,7 +22,7 @@ if (debug) {
 /**
  * initialize pool connection to postgresql database with params
  */
-App.context.dbh = pgDbhInit({connectionString: 'postgresql://user:123@server.db.ru:5432/test'}, paramsDbConnect);
+App.context.dbh = pgDbhInit(pg, {connectionString: 'postgresql://user:123@server.db.ru:5432/test'}, paramsDbConnect);
 
 /**
  * example route

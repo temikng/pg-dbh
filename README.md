@@ -5,11 +5,17 @@ PostgreSQL database pool holder
 ## Connection
 
 ```javascript
+const pg = require('pg');
 const pgDbhInit = require('pg-dbh');
 const connect = { /* ... */ };
 const params = { /* ... */ };
-const dbh = pgDbhInit(connect, params);
+const dbh = pgDbhInit(pg, connect, params);
 ```
+
+### - pg
+
+user selected version of 
+[pg package](https://github.com/brianc/node-postgres)
 
 ### - connect
 
